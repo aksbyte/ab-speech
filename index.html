@@ -31,7 +31,23 @@
 
   <title>speech</title>
   <link rel="manifest" href="manifest.json">
+ <style>
+    #loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 
+  <script>
+    window.onload = function () {
+      // Simulate a delay (replace this with your actual initialization logic)
+      setTimeout(function () {
+        document.getElementById('loading').style.display = 'none';
+      }, 5000); // 5000 milliseconds (adjust as needed)
+    };
+  </script>
   <script>
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = "3638897856";
@@ -49,6 +65,7 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+   <div id="loading">Loading...</div>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
